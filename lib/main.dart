@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_tester_flutter/page-1/login.dart';
 import 'package:project_tester_flutter/page-1/utils.dart';
 //import 'package:project_tester_flutter/page-1/login.dart';
 import 'package:project_tester_flutter/page-1/welcome.dart';
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
 		),
     routes: {
     '/register': (context) => Register(),
+    '/login': (context) => Login(),
     // other routes...
   },
   // rest of your MaterialApp configuration...

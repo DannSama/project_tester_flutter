@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project_tester_flutter/page-1//utils.dart';
 
 class Register extends StatelessWidget {
+  TextEditingController emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 414;
@@ -166,30 +168,36 @@ class Register extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              // emailUsP (23:20)
-              left: 178.5*fem,
-              top: 382.5*fem,
-              child: Center(
-                child: Align(
-                  child: SizedBox(
-                    width: 57*fem,
-                    height: 30*fem,
-                    child: Text(
-                      'email',
-                      textAlign: TextAlign.center,
-                      style: SafeGoogleFont (
-                        'Poppins',
-                        fontSize: 20*ffem,
-                        fontWeight: FontWeight.w400,
-                        height: 1.5*ffem/fem,
-                        color: Color(0xff000000),
-                      ),
-                    ),
-                  ),
-                ),
+    Positioned(
+      // email input
+      left: 178.5 * fem,
+      top: 382.5 * fem,
+      child: Center(
+        child: Align(
+          child: SizedBox(
+            width: 150 * fem,
+            height: 30 * fem,
+            child: TextField(
+              controller: emailController,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                hintText: 'Enter your email',
+                border: OutlineInputBorder(),
+                contentPadding: EdgeInsets.symmetric(horizontal: 10),
+              ),
+              style: SafeGoogleFont(
+                'Poppins',
+                fontSize: 20 * ffem,
+                fontWeight: FontWeight.w400,
+                height: 1.5 * ffem / fem,
+                color: Color(0xff000000),
               ),
             ),
+          ),
+        ),
+      ),
+    ),
+
             Positioned(
               // fullnamendB (24:33)
               left: 162*fem,
@@ -199,8 +207,7 @@ class Register extends StatelessWidget {
                   child: SizedBox(
                     width: 94*fem,
                     height: 30*fem,
-                    child: Text(
-                      'full name',
+                    child: TextField(
                       textAlign: TextAlign.center,
                       style: SafeGoogleFont (
                         'Poppins',

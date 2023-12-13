@@ -88,7 +88,12 @@ class Scene extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
+                      GestureDetector(
+                        onTap: () {
+    // Navigate to the register page
+    Navigator.pushNamed(context, '/login'); // You need to define this route in your MaterialApp
+  },
+                      child: Container(
                         // autogroupe3qf38Z (GFPVoxYnvReY6fPjW7e3qF)
                         margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 37*fem, 0*fem),
                         width: 157*fem,
@@ -116,6 +121,7 @@ class Scene extends StatelessWidget {
                             ),
                           ),
                         ),
+                      ),
                       ),
                       GestureDetector(
                         onTap: () {
