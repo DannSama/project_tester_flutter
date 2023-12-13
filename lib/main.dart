@@ -3,10 +3,11 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_tester_flutter/page-1/login.dart';
-import 'package:project_tester_flutter/page-1/utils.dart';
+// import 'package:project_tester_flutter/page-1/utils.dart';
 //import 'package:project_tester_flutter/page-1/login.dart';
-import 'package:project_tester_flutter/page-1/welcome.dart';
+// import 'package:project_tester_flutter/page-1/welcome.dart';
 import 'package:project_tester_flutter/page-1/register.dart';
+import 'package:project_tester_flutter/page-1/utils.dart';
 // import 'package:project_tester_flutter/page-1/about-detail.dart';
 // import 'package:project_tester_flutter/page-1/product.dart';
 // import 'package:project_tester_flutter/page-1/bid.dart';
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
 		),
 		home: Scaffold(
 		body: SingleChildScrollView(
-			child: Scene(),
+			child: Login(),
 		),
 		),
     routes: {

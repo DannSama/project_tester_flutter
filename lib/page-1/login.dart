@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project_tester_flutter/page-1/utils.dart';
 
 class Login extends StatelessWidget {
+  var prefixIcon;
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 414;
@@ -141,17 +143,13 @@ class Login extends StatelessWidget {
                   child: SizedBox(
                     width: 99*fem,
                     height: 30*fem,
-                    child: Text(
-                      'password',
-                      textAlign: TextAlign.center,
-                      style: SafeGoogleFont (
-                        'Poppins',
-                        fontSize: 20*ffem,
-                        fontWeight: FontWeight.w400,
-                        height: 1.5*ffem/fem,
-                        color: Color(0xff000000),
-                      ),
-                    ),
+                    child: TextField(
+            decoration: InputDecoration(
+              prefixIcon: prefixIcon??Icon(Icons.place),
+              border: OutlineInputBorder(),
+              hintText: 'Enter a search term',
+            ),
+          ),
                   ),
                 ),
               ),
@@ -165,17 +163,13 @@ class Login extends StatelessWidget {
                   child: SizedBox(
                     width: 103*fem,
                     height: 30*fem,
-                    child: Text(
-                      'username',
-                      textAlign: TextAlign.center,
-                      style: SafeGoogleFont (
-                        'Poppins',
-                        fontSize: 20*ffem,
-                        fontWeight: FontWeight.w400,
-                        height: 1.5*ffem/fem,
-                        color: Color(0xff000000),
-                      ),
-                    ),
+                    child: TextField(
+            decoration: InputDecoration(
+              prefixIcon: prefixIcon??Icon(Icons.done),
+              border: OutlineInputBorder(),
+              hintText: 'Enter a search term',
+            ),
+          ),
                   ),
                 ),
               ),
